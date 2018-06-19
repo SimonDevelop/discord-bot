@@ -1,39 +1,34 @@
 // Initialisation de la librairie
+const config = require("./config.json")
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-
 
 // Initialisation des classes
 const Help = require('./commands/help')
 const Youtube = require('./commands/youtube')
 const Clear = require('./commands/clear')
 
-
 // Code exécuté lors de la connection du bot
-bot.on('ready', function() {
-  bot.user.setGame("Développer").catch(console.error)
-  console.log("Je suis connecté !")
+bot.on('ready', () => {
+  console.log("Bot ready !")
 })
 
-
 // Message de bienvenue au nouveaux membre du serveur discord (MP)
-bot.on('guildMemberAdd', function (member) {
-  member.createDM().then(function (channel) {
-    return channel.send(`Bienvenue `+ member.displayName +` sur le Discord de (Votre serveur)) !\n\n`
+bot.on('guildMemberAdd', (member) => {
+  member.createDM().then((channel) => {
+    return channel.send(`Bienvenue `+ member.displayName +` du serveur Discord `+ config.server +` !\n\n`
     +`Si vous voulez connaitre les divers commandes qui vous sont disponible pour communiquer avec moi, tapez la commande "!help".\n`
-    +`Mon développeur est "(Vous)", il espére que je puisse vous être utile :)`)
+    +`J'espère vous être utile :)`)
   }).catch(console.error)
 })
 
-
 // Les divers commands actives
-bot.on('message', function(message) {
+bot.on('message', (message) => {
   let commandUsed =
   Help.parse(message) ||
   Youtube.parse(message) ||
   Clear.parse(message)
 })
 
-
 // Token du propriétaire du bot
-bot.login('<YOUR_API_KEY>')
+bot.login(config.key)

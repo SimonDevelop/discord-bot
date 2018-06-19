@@ -18,13 +18,13 @@ module.exports = class Clear extends Command {
 
     // Effacement des messages du channel texte
     message.channel.fetchMessages({
-      limit: messagesToClean
+      limit: messagesToClean + 1
     }).then(messages => {
       messages.forEach(message => {
         return message.delete();
       })
     })
-    
+
   }
 
 }
