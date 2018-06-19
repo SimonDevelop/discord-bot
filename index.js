@@ -11,15 +11,15 @@ const Clear = require('./commands/clear')
 
 
 // Code exécuté lors de la connection du bot
-bot.on('ready', function() {
+bot.on('ready', () => {
   bot.user.setGame("Développer").catch(console.error)
   console.log("Je suis connecté !")
 })
 
 
 // Message de bienvenue au nouveaux membre du serveur discord (MP)
-bot.on('guildMemberAdd', function (member) {
-  member.createDM().then(function (channel) {
+bot.on('guildMemberAdd', (member) => {
+  member.createDM().then((channel) => {
     return channel.send(`Bienvenue `+ member.displayName +` sur le Discord de (Votre serveur)) !\n\n`
     +`Si vous voulez connaitre les divers commandes qui vous sont disponible pour communiquer avec moi, tapez la commande "!help".\n`
     +`Mon développeur est "(Vous)", il espére que je puisse vous être utile :)`)
@@ -28,7 +28,7 @@ bot.on('guildMemberAdd', function (member) {
 
 
 // Les divers commands actives
-bot.on('message', function(message) {
+bot.on('message', (message) => {
   let commandUsed =
   Help.parse(message) ||
   Youtube.parse(message) ||

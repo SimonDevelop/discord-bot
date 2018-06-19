@@ -27,7 +27,7 @@ module.exports = class Youtube extends Command {
       // Connexion au channel vocal
       voiceChannel
         .join()
-        .then(function (connection) {
+        .then((connection) => {
 
           // Si stop est demandé, alors je me déconnect
           if(args[1] === "stop"){
@@ -40,7 +40,7 @@ module.exports = class Youtube extends Command {
             let stream = YoutubeStream(args[1])
 
             // Si lecture echoue, alors je le dit
-            stream.on('error', function () {
+            stream.on('error', () => {
               message.reply("Je n'ai pas réussi à lire cette vidéo :(")
               connection.disconnect()
             })
@@ -48,7 +48,7 @@ module.exports = class Youtube extends Command {
             // Si lecture, alors je le li la vidéo et je me déconnect à la fin
             connection
               .playStream(stream)
-              .on('end', function () {
+              .on('end', () => {
                 connection.disconnect()
               })
 
