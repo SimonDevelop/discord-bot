@@ -17,7 +17,7 @@ module.exports = class Clear extends Command {
     let messagesToClean = args[1] && !isNaN(args[1]) ? Number(args[1]) : 100;
 
     // Effacement des messages du channel texte
-    if (message.channel.permissionsFor(message.member).hasPermission("MANAGE_MESSAGES")) {
+    if (message.channel.permissionsFor(message.member).has("MANAGE_MESSAGES")) {
       message.channel.fetchMessages({
         limit: messagesToClean
       }).then(messages => {
