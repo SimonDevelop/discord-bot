@@ -1,4 +1,5 @@
 // Initialisation de la librairie
+const api = require("./api.json")
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 
@@ -36,4 +37,4 @@ bot.on('message', function(message) {
 
 
 // Token du propriétaire du bot
-bot.login('<YOUR_API_KEY>')
+bot.login(api.key)
