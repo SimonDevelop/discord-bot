@@ -1,7 +1,7 @@
 {
   "name": "discord-bot",
   "version": "1.0.0",
-  "description": "Bot discord du serveur horyzone",
+  "description": "Simple discord bot in development",
   "main": "index.js",
   "dependencies": {
     "discord.js": "^11.3.0",
