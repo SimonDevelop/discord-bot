@@ -25,4 +25,5 @@ $ npm start
 ## Todo
 
 - [x] Manage access rights to commands
-- [ ] Soundcloud music playback
+- [ ] Soundcloud music playback (API key creation unavailable at the moment)
+- [ ] Note system ?

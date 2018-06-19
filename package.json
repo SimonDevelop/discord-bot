@@ -6,7 +6,6 @@
   "dependencies": {
     "discord.js": "^11.3.0",
     "node-opus": "^0.3.0",
-    "youtube-audio-stream": "0.2.0",
     "ytdl-core": "^0.20.4"
   },
   "scripts": {
