@@ -16,7 +16,13 @@ Edit `config.json` for the token API and your server name.
 $ npm start
 ```
 
+## Commands
+- `!help`
+- `!yt <url_youtube_video>`
+- `!yt stop`
+- `!clear <number_of_messages_to_clear> | default 100` (user with `KICK_MEMBERS` permission only)
+
 ## Todo
 
-- [ ] Manage access rights to commands
+- [x] Manage access rights to commands
 - [ ] Soundcloud music playback

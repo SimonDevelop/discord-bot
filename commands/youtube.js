@@ -57,7 +57,7 @@ module.exports = class Youtube extends Command {
 
     // Sinon on lui envoie un message comme quoi il n'est dans aucun channel vocal
     }else{
-      message.reply(`Désolé ${message.author}, mais tu n'es dans aucun channel vocal :/`)
+      message.reply(`Vous n'êtes dans aucun channel vocal.`)
        .then(msg => console.log(`Réponse pour ${message.author}`))
        .catch(console.error);
     }
