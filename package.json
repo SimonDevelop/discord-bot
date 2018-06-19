@@ -9,9 +9,8 @@
     "youtube-audio-stream": "0.2.0",
     "ytdl-core": "^0.20.4"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "author": "SimonDevelop",
   "license": "MIT"
