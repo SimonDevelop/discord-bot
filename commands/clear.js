@@ -17,14 +17,19 @@ module.exports = class Clear extends Command {
     let messagesToClean = args[1] && !isNaN(args[1]) ? Number(args[1]) : 100;
 
     // Effacement des messages du channel texte
-    message.channel.fetchMessages({
-      limit: messagesToClean + 1
-    }).then(messages => {
-      messages.forEach(message => {
-        return message.delete();
+    if (message.member.hasPermission('KICK_MEMBERS')) {
+      message.channel.fetchMessages({
+        limit: messagesToClean
+      }).then(messages => {
+          messages.forEach(message => {
+            return message.delete();
+          })
       })
-    })
-
+    } else {
+      message.reply(`Vous avez pas les droits nécessaires pour lancer cette commande.`)
+       .then(msg => console.log(`Réponse pour ${message.author}`))
+       .catch(console.error);
+    }
   }
 
 }
