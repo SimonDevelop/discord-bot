@@ -24,6 +24,7 @@ $ npm start
 
 ## Todo
 
-- [x] Manage access rights to commands
+- [x] Manage access rights to commands (for `!clear` command)
+- [x] Validate youtube url
 - [ ] Soundcloud music playback (API key creation unavailable at the moment)
 - [ ] Note system ?
