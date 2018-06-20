@@ -14,6 +14,11 @@ module.exports = class Youtube extends Command {
 
   // Si reconnaissance, alors executer l'action
   static action (message) {
+    // Regex url youtube
+    let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/
+
+    let match = args[1].match(regExp)
+    console.log(match)
 
     // On récupère le paramètre
     let args = message.content.split(' ')
@@ -30,14 +35,14 @@ module.exports = class Youtube extends Command {
         .then((connection) => {
 
           // Si stop est demandé, alors je me déconnect
-          if(args[1] === "stop"){
+          if (args[1] === "stop") {
             connection.disconnect()
 
           // Sinon je me connect
-          }else{
+          } else {
 
             // Objet stream avec la vidéo youtube (l'url donnée) en paramètre
-            let stream = YoutubeStream(args[1])
+            let stream = YoutubeStream(args[1], {filter: 'audioonly'})
 
             // Si lecture echoue, alors je le dit
             stream.on('error', () => {
