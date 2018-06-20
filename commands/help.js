@@ -16,7 +16,8 @@ module.exports = class Help extends Command {
     message.reply(`Voici ma liste de commandes disponibles :\n\n`
       +`- Pour lancer une lecture de vidéo youtube -> "!yt https://www.youtube.com/watch?v=XXXXXXXXXXX"\n`
       +`- Pour stoper la lecture de vidéo youtube -> "!yt stop"\n`
-      +`- Pour effectuer une recherche wikipedia -> "!wk ma recherche"`)
+      +`- Pour effectuer une recherche wikipedia -> "!wk ma recherche"\n`
+      +`- Pour lancer la roulette -> "!roll"`)
      .then(msg => console.log(`Réponse pour ${message.author}`))
      .catch(console.error)
 
