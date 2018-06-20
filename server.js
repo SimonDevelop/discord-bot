@@ -5,6 +5,7 @@ const bot = new Discord.Client()
 
 // Initialisation des classes
 const Help = require('./commands/help')
+const Roll = require('./commands/roll')
 const Youtube = require('./commands/youtube')
 const Wikipedia = require('./commands/wikipedia')
 const Clear = require('./commands/clear')
@@ -27,6 +28,7 @@ bot.on('guildMemberAdd', (member) => {
 bot.on('message', (message) => {
   let commandUsed =
   Help.parse(message) ||
+  Roll.parse(message) ||
   Youtube.parse(message) ||
   Wikipedia.parse(message) ||
   Clear.parse(message)
