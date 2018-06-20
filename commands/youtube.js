@@ -21,7 +21,7 @@ module.exports = class Youtube extends Command {
     let voiceChannel = message.member.voiceChannel
 
     // Si l'auteur du message est dans un channel vocal, alors on lance
-    if(typeof(voiceChannel) != "undefined"){
+    if (typeof(voiceChannel) != "undefined") {
 
       // Connexion au channel vocal
       voiceChannel
@@ -66,7 +66,7 @@ module.exports = class Youtube extends Command {
         }).catch(console.error);
 
     // Sinon on lui envoie un message comme quoi il n'est dans aucun channel vocal
-    }else{
+    } else {
       message.reply(`Vous n'êtes dans aucun channel vocal.`)
        .then(msg => console.log(`Réponse pour ${message.author}`))
        .catch(console.error);
