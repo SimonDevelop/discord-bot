@@ -18,7 +18,7 @@ module.exports = class Help extends Command {
       +`- Pour stoper la lecture de vidéo youtube -> "!yt stop"\n`
       +`- Pour effectuer une recherche wikipedia -> "!wk ma recherche"`)
      .then(msg => console.log(`Réponse pour ${message.author}`))
-     .catch(console.error);
+     .catch(console.error)
 
   }
 

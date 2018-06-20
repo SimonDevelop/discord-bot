@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/Version-0.1.1-brightgreen.svg)](https://github.com/SimonDevelop/discord-bot/releases/tag/0.1.1)
+[![version](https://img.shields.io/badge/Version-0.1.2-brightgreen.svg)](https://github.com/SimonDevelop/discord-bot/releases/tag/0.1.2)
 [![Minimum Node Version](https://img.shields.io/badge/node-%3E%3D%208-brightgreen.svg)](https://nodejs.org/en/)
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/SimonDevelop/discord-bot/blob/master/LICENSE)
 # discord-bot
@@ -19,6 +19,7 @@ $ npm start
 
 ## Commands
 - `!help` (publics commands only)
+- `!roll`
 - `!yt <url_youtube_video>`
 - `!yt stop`
 - `!wk my search`
@@ -26,7 +27,10 @@ $ npm start
 
 ## Todo
 
-- [x] Manage access rights to commands (for `!clear` command)
+- [x] Playback youtube video
 - [x] Validate youtube url
+- [x] Clear messages of channel
+- [x] Manage access rights to commands (for `!clear` command)
 - [x] Wikipedia search (fr by default)
-- [ ] User stats with mongoDB
+- [x] Roll
+- [ ] User stats with mongoDB (just idea)

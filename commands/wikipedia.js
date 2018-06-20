@@ -43,7 +43,7 @@ module.exports = class Wikipedia extends Command {
         						message.channel.send(paragraph,continuation)
         					}
       					};
-      					continuation();
+      					continuation()
               })
             })
         })

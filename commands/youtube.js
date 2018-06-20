@@ -59,17 +59,17 @@ module.exports = class Youtube extends Command {
             } else {
               message.reply(`Url youtube non reconnue.`)
                .then(msg => console.log(`Réponse pour ${message.author}`))
-               .catch(console.error);
+               .catch(console.error)
             }
 
           }
-        }).catch(console.error);
+        }).catch(console.error)
 
     // Sinon on lui envoie un message comme quoi il n'est dans aucun channel vocal
     } else {
       message.reply(`Vous n'êtes dans aucun channel vocal.`)
        .then(msg => console.log(`Réponse pour ${message.author}`))
-       .catch(console.error);
+       .catch(console.error)
     }
 
   }
