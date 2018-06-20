@@ -37,25 +37,30 @@ module.exports = class Youtube extends Command {
 
             // Regex url youtube
             let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/
-
             let match = args[1].match(regExp)
-            console.log(match)
 
-            // Objet stream avec la vidéo youtube (l'url donnée) en paramètre
-            let stream = YoutubeStream(args[1], {filter: 'audioonly'})
+            if (match != null) {
 
-            // Si lecture echoue, alors je le dit
-            stream.on('error', () => {
-              message.reply("Je n'ai pas réussi à lire cette vidéo :(")
-              connection.disconnect()
-            })
+                // Objet stream avec la vidéo youtube (l'url donnée) en paramètre
+                let stream = YoutubeStream(args[1], {filter: 'audioonly'})
 
-            // Si lecture, alors je le li la vidéo et je me déconnect à la fin
-            connection
-              .playStream(stream)
-              .on('end', () => {
-                connection.disconnect()
-              })
+                // Si lecture echoue, alors je le dit
+                stream.on('error', () => {
+                  message.reply("Je n'ai pas réussi à lire cette vidéo :(")
+                  connection.disconnect()
+                })
+
+                // Si lecture, alors je le li la vidéo et je me déconnect à la fin
+                connection
+                  .playStream(stream)
+                  .on('end', () => {
+                    connection.disconnect()
+                  })
+            } else {
+              message.reply(`Url youtube non reconnue.`)
+               .then(msg => console.log(`Réponse pour ${message.author}`))
+               .catch(console.error);
+            }
 
           }
         }).catch(console.error);
