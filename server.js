@@ -6,6 +6,7 @@ const bot = new Discord.Client()
 // Initialisation des classes
 const Help = require('./commands/help')
 const Youtube = require('./commands/youtube')
+const Wikipedia = require('./commands/wikipedia')
 const Clear = require('./commands/clear')
 
 // Code exécuté lors de la connection du bot
@@ -27,6 +28,7 @@ bot.on('message', (message) => {
   let commandUsed =
   Help.parse(message) ||
   Youtube.parse(message) ||
+  Wikipedia.parse(message) ||
   Clear.parse(message)
 })
 
