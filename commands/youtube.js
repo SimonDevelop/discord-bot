@@ -14,12 +14,6 @@ module.exports = class Youtube extends Command {
 
   // Si reconnaissance, alors executer l'action
   static action (message) {
-    // Regex url youtube
-    let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/
-
-    let match = args[1].match(regExp)
-    console.log(match)
-
     // On récupère le paramètre
     let args = message.content.split(' ')
 
@@ -40,6 +34,12 @@ module.exports = class Youtube extends Command {
 
           // Sinon je me connect
           } else {
+
+            // Regex url youtube
+            let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/
+
+            let match = args[1].match(regExp)
+            console.log(match)
 
             // Objet stream avec la vidéo youtube (l'url donnée) en paramètre
             let stream = YoutubeStream(args[1], {filter: 'audioonly'})
