@@ -14,7 +14,7 @@ module.exports = class Clear extends Command {
 
     // On récupère le chiffre paramètre (si il y en as un ou non) et on défini le nombre de messages à supprimer
     let args = message.content.split(' ')
-    let messagesToClean = args[1] && !isNaN(args[1]) ? Number(args[1]) : 100;
+    let messagesToClean = args[1] && !isNaN(args[1]) ? Number(args[1]) : 100
 
     // Effacement des messages du channel texte
     if (message.channel.permissionsFor(message.member).has("MANAGE_MESSAGES")) {
@@ -22,13 +22,13 @@ module.exports = class Clear extends Command {
         limit: messagesToClean
       }).then(messages => {
           messages.forEach(message => {
-            return message.delete();
+            return message.delete()
           })
       })
     } else {
       message.reply(`Vous avez pas les droits nécessaires pour lancer cette commande.`)
        .then(msg => console.log(`Réponse pour ${message.author}`))
-       .catch(console.error);
+       .catch(console.error)
     }
   }
 
