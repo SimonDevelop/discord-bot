@@ -7,7 +7,7 @@
     "discord.js": "^11.3.2",
     "opusscript": "^0.0.6",
     "wikijs": "^4.8.1",
-    "youtube-audio-stream": "0.2.0",
+    "youtube-audio-stream": "0.3.0",
     "ytdl-core": "^0.28.0"
   },
   "scripts": {
