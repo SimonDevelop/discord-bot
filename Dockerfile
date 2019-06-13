@@ -1,6 +1,7 @@
 FROM keymetrics/pm2:latest-alpine
 
 # Bundle APP files
+COPY commands /commands
 COPY server.js .
 COPY config.json .
 COPY package.json .
