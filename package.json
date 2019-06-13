@@ -2,7 +2,8 @@
   "name": "discord-bot",
   "version": "0.1.2",
   "description": "Simple discord bot in development",
-  "main": "index.js",
+  "main": "server.js",
+  "private": true,
   "dependencies": {
     "discord.js": "^11.3.2",
     "opusscript": "^0.0.6",
