@@ -7,7 +7,7 @@
   "dependencies": {
     "discord.js": "^11.3.2",
     "opusscript": "^0.0.6",
-    "wikijs": "^5.1.1",
+    "wikijs": "^6.0.0",
     "youtube-audio-stream": "0.3.1",
     "ytdl-core": "^0.29.0"
   },
