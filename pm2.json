@@ -1,5 +1,5 @@
 {
   "name": "discord-bot",
   "script": "server.js",
-  "instances": "2"
+  "instances": "1"
 }
