@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/Version-0.1.2-brightgreen.svg)](https://github.com/SimonDevelop/discord-bot/releases/tag/0.1.2)
+[![version](https://img.shields.io/badge/Version-0.1.3-brightgreen.svg)](https://github.com/SimonDevelop/discord-bot/releases/tag/0.1.3)
 [![Minimum Node Version](https://img.shields.io/badge/node-%3E%3D%208-brightgreen.svg)](https://nodejs.org/en/)
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/SimonDevelop/discord-bot/blob/master/LICENSE)
 # discord-bot
