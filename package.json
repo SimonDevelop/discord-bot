@@ -9,7 +9,7 @@
     "opusscript": "^0.0.7",
     "wikijs": "^6.0.0",
     "youtube-audio-stream": "0.3.5",
-    "ytdl-core": "^1.0.0"
+    "ytdl-core": "^2.0.0"
   },
   "scripts": {
     "start": "node server.js"
