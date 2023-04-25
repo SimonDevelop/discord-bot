@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {
     "discord.js": "^13.0.1",
-    "opusscript": "^0.0.8",
+    "opusscript": "^0.1.0",
     "wikijs": "^6.0.0",
     "youtube-audio-stream": "0.3.61",
     "ytdl-core": "^4.0.0"
